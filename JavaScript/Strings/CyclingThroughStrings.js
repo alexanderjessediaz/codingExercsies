@@ -15,42 +15,31 @@
 // Notes
 // All tests will include valid strings.
 
-const string1 = "hello";
-const string2 = "goodbye";
-const string3 = "ax";
-const string4 = "controller";
-const sentence1 = "the dog ran outside.";
-const sentence2 = "I like cake.";
 stringCycling = (a,b) => {
-    // b.length > a.length ? a.repeat(b.length) : new a.length === b.length
-    let stringArray = [a,b]
-    let rewrittenString = []
-    
-    let rewriteStringToArray = stringArray[0].split('')
-    const bStringLength = stringArray[1].length
-    
-    
-    for(let i=0;i<bStringLength; i++) {
-    	if( bStringLength > rewriteStringToArray.length) {
-      let repeatString =	rewrittenString.push(
-      rewriteStringToArray[i])
-      
+  // b.length > a.length ? a.repeat(b.length) : new a.length === b.length
+  let stringArray = [a,b]
+  let rewrittenString = []
   
-      } else {
-      	rewrittenString.push(rewriteStringToArray[i])
-      }
-    	
+  
+  let rewrittenStringToArray = stringArray[0].split('')
+  const bStringLength = stringArray[1].length
+  
+  for(let i=0;i<bStringLength; i++) {
+    if( bStringLength > rewrittenStringToArray.length) {
+     rewrittenStringToArray.splice(
+      rewrittenStringToArray.length,0, rewrittenStringToArray[i]
+     ).join("")
+     
+    } else{
+       rewrittenString.push(rewrittenStringToArray[i])
     }
     
-   /* const newString = stringArray.reduce((acc,cv,ci,arr) => {
-      let rewrittenString = arr[0].split('')
-      let rewrittenStringLength = arr[1].length
-      
-      
-    },[]) */
-   
-
-    console.log(rewrittenString)
+  }
+  console.log(rewrittenStringToArray)
+/*      return rewrittenString */
+  
 }
+
+console.log(stringCycling(string1,string2))
 
 console.log(stringCycling(string1,string2))
