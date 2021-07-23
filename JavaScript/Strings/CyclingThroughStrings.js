@@ -15,31 +15,26 @@
 // Notes
 // All tests will include valid strings.
 
+const string1 = "hello"
+const string2 = "goodbye"
+const string3 = "ax"
+
 stringCycling = (a,b) => {
-  // b.length > a.length ? a.repeat(b.length) : new a.length === b.length
-  let stringArray = [a,b]
-  let rewrittenString = []
-  
-  
+  let stringArray = [a,b]  
   let rewrittenStringToArray = stringArray[0].split('')
   const bStringLength = stringArray[1].length
   
   for(let i=0;i<bStringLength; i++) {
-    if( bStringLength > rewrittenStringToArray.length) {
-     rewrittenStringToArray.splice(
-      rewrittenStringToArray.length,0, rewrittenStringToArray[i]
-     ).join("")
-     
+  	if( bStringLength > rewrittenStringToArray.length) {
+    	rewrittenStringToArray.splice(
+      	rewrittenStringToArray.length,0,rewrittenStringToArray[i]
+     	).join("")
     } else{
-       rewrittenString.push(rewrittenStringToArray[i])
-    }
-    
-  }
-  console.log(rewrittenStringToArray)
-/*      return rewrittenString */
-  
+    	rewrittenStringToArray.length = bStringLength
+      return rewrittenStringToArray.join("")
+    } 
+   }
+   return rewrittenStringToArray
 }
-
-console.log(stringCycling(string1,string2))
 
 console.log(stringCycling(string1,string2))
