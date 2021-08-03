@@ -5,7 +5,10 @@
 // addName({ piano: 500 }, "Brutus", 400) ➞ { piano: 500, Brutus: 400 }
 
 // addName({ piano: 500, stereo: 300 }, "Caligula", 440) ➞ { piano: 500, stereo: 300, Caligula: 440 }
-
-const addName = (obj, name, value) => {
-    // solution could be solved with Object.assign
+const addName = (obj,name,value) => {
+    const test = [[name,value]]
+    const nameObj =  Object.fromEntries(test) 
+    const newObj = Object.assign({},obj, nameObj)
+    
+    return newObj
 }
