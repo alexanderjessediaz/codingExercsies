@@ -21,3 +21,9 @@
 // plusTen(188) ➞ 198
 
 // plusFive(plusTen(0)) ➞ 15
+
+const makePlusFunction = (baseNum) => {
+	return function(num){
+  	return	num + baseNum
+  }
+}
