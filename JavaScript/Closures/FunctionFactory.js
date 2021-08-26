@@ -24,6 +24,6 @@
 
 const makePlusFunction = (baseNum) => {
 	return function(num){
-  	return	num + baseNum
+  	    return	num + baseNum
   }
 }
