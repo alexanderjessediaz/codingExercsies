@@ -11,16 +11,7 @@
 // add_less("ruth") ➞ "ruthless"
 
 const add_suffix = suffix => {
-    if(suffix === "ly"){
-        const add_ly = () => {
-            return "ly"
-        }
-      return add_ly()
-    } else{ 
-        const add_less = () => {
-            return "less"
-        }
-       return add_less()
+    const determineWord = word => {
+        return word + suffix
     }
-
 }
